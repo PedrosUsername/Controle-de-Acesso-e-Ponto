@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import javax.persistence.GeneratedValue;
 
 @Getter
 @Setter
@@ -19,6 +20,7 @@ import java.time.LocalDateTime;
 @Audited
 public class User {
     @Id
+    @GeneratedValue    
     private Long id;
     @ManyToOne
     private UserCategory userCategory;

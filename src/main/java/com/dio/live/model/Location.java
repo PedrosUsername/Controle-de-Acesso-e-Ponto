@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.GeneratedValue;
 
 @Getter
 @Setter
@@ -16,6 +17,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Location {
     @Id
+    @GeneratedValue
     private long id;
     @ManyToOne
     private AccessLevel accessLevel;

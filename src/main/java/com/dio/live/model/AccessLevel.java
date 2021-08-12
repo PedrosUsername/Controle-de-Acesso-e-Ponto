@@ -5,6 +5,7 @@ import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
 
 @Getter
 @Setter
@@ -16,6 +17,7 @@ import javax.persistence.Id;
 @Audited
 public class AccessLevel {
     @Id
+    @GeneratedValue    
     private long id;
     private String description;
 }

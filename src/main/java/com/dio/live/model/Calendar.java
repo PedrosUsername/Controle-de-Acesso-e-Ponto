@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
+import javax.persistence.GeneratedValue;
 
 @Getter
 @Setter
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 @Entity
 public class Calendar {
     @Id
+    @GeneratedValue    
     private Long id;
     @ManyToOne
     private DateType dateType;
