@@ -24,7 +24,7 @@ public class Enterprise {
     private String cnpj;
     private String address;
     private String neighborhood;
-    private String ciry;
+    private String city;
     private String state;
     private String phone;
 }
