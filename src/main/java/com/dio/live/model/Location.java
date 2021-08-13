@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Getter
 @Setter
@@ -17,7 +18,7 @@ import javax.persistence.GeneratedValue;
 @Entity
 public class Location {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
     @ManyToOne
     private AccessLevel accessLevel;

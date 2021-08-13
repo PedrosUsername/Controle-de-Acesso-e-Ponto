@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Getter
 @Setter
@@ -17,7 +18,7 @@ import javax.persistence.GeneratedValue;
 @Entity
 public class Calendar {
     @Id
-    @GeneratedValue    
+    @GeneratedValue(strategy=GenerationType.AUTO)    
     private Long id;
     @ManyToOne
     private DateType dateType;
