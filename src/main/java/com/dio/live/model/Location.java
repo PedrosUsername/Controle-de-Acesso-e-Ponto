@@ -5,9 +5,9 @@ import lombok.*;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+
 
 @Getter
 @Setter
@@ -19,8 +19,8 @@ import javax.persistence.GenerationType;
 public class Location {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private long id;
+    private Long id;
     @ManyToOne
-    private AccessLevel accessLevel;
+    private AccessLevel accessLevel;    
     private String description;
 }
