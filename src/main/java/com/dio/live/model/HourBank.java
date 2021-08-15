@@ -5,6 +5,9 @@ import lombok.*;
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -19,18 +22,6 @@ import java.time.LocalDateTime;
 @Entity
 public class HourBank {
 
-
-    @EqualsAndHashCode
-    @Embeddable
-    @Getter
-    @Setter
-    public  class HourBankId implements Serializable{
-        private long idHourBank;
-        private long idMove;
-        private long idUser;
-
-
-    }
     @EmbeddedId
     private HourBankId hourBankId;
     private LocalDateTime workDate;
