@@ -1,6 +1,7 @@
 package com.dio.live;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,6 +16,7 @@ import javax.persistence.GenerationType;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class DateType {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)

@@ -1,6 +1,7 @@
 package com.dio.live;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -19,6 +20,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class Calendar {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)    
